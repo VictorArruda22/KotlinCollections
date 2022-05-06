@@ -28,4 +28,22 @@ fun main(){
     )
 
     val livros: MutableList<Livro> = mutableListOf(livro1, livro2, livro3, livro4)
+
+    livros.add(
+        Livro(
+            titulo = "Código limpo",
+            autor = "Robert Cecil Martin",
+            anoPublicacao = 2008,
+            editora = "Alta books"
+        )
+    )
+
+    livros.imprimeComMarcadores()
+}
+
+fun  MutableList<Livro>.imprimeComMarcadores(){
+    val textoFormatado = this.joinToString(separator = "\n") {
+        " - ${it.titulo} de ${it.autor}"
+    }
+    println(" ### Lista de Livros ### \n$textoFormatado")
 }
