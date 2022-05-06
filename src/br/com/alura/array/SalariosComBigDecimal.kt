@@ -29,6 +29,7 @@ fun main(){
         .takeLast(3)
         .toTypedArray()
         .media()
+
     println(media)
 
     val mediaMenoresSalarios = salariosComAumento
