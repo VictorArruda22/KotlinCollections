@@ -24,10 +24,11 @@ fun main(){
     }
     println(gastoTotal)
 
-    val salariosOrdenados = salariosComAumento.sorted()
-    val tresUltimosSalarios: Array<BigDecimal> = salariosOrdenados.takeLast(3).toTypedArray()
-
-    val media = tresUltimosSalarios.media()
+    val media = salariosComAumento
+        .sorted()
+        .takeLast(3)
+        .toTypedArray()
+        .media()
     println(media)
 
 }
