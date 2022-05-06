@@ -31,6 +31,14 @@ fun main(){
         .media()
     println(media)
 
+    val mediaMenoresSalarios = salariosComAumento
+        .sorted()
+        .take(3)
+        .toTypedArray()
+        .media()
+
+    println(mediaMenoresSalarios)
+
 }
 
 private fun calculaAumentoRelativo(salario: BigDecimal, aumento: BigDecimal) =
